@@ -46,6 +46,7 @@ exports.grantAccess = function(action, resource) {
 }
 
 exports.allowIfLoggedin = async (req, res, next) => {
+    next();
     /*try {
         console.info(req.headers);
         if(req.headers["authorization"]) {
