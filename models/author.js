@@ -56,6 +56,8 @@ AuthorSchema
   return (this.formatted_date_of_birth + '-' + this.formatted_date_of_death);
 });
 
+AuthorSchema.set('toJSON', { virtuals: true });
+
 //Export model
 module.exports = mongoose.model('Author', AuthorSchema);
 
